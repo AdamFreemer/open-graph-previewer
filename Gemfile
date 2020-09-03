@@ -25,7 +25,7 @@ gem 'bootsnap', '>= 1.4.2', require: false
 # Non-standard helper gems
 gem 'delayed_job_active_record'
 gem 'nokogiri'
-
+# gem 'open-uri'
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
