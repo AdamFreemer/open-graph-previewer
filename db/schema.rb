@@ -18,7 +18,7 @@ ActiveRecord::Schema.define(version: 2020_09_03_022706) do
   create_table "pages", force: :cascade do |t|
     t.string "url"
     t.string "og_image"
-    t.boolean "processed"
+    t.boolean "processed", default: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
