@@ -6,13 +6,11 @@ $(document).ready(function() {
 
     $.post( "/pages/", url, function(data) {
       $(".result").html(data);
-      console.log('== data: ' + data['page_being_processed'])
+
+      checkProcessedJob(data['page_id']);
     }); 
 
     // run this until og_image is populated ever 2s
-    updateProcessedJob(data['page_id']);
-
-    $("#og_image").attr("src", "https://www.apple.com/ac/structured-data/images/open_graph_logo.png?201809210816");
   });
 });
 
@@ -21,6 +19,12 @@ function checkProcessedJob(page_id) {
   $.get( "/pages/" + page_id, function(data) {
     $(".result").html(data);
 
+    console.log("data['og_image_url']: " + data['og_image_url'])
+    console.log("data['processed']: " + data['processed'])
+    $('#og_url').text(`${data['og_image_url']}` );
+
+
     $("#og_image").attr("src", data['og_image_url']);
+    $("#query-page-button").html("<span></i>Submit</span>"); 
   }); 
 }

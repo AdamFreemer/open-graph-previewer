@@ -3,15 +3,15 @@ class PagesController < ApplicationController
   end
 
   def create
-    page = Page.create(url: URI.decode(params[:url]))
+    page = Page.create(page_url: URI.decode(params[:url]))
     FetchUrlOgImageJob.perform_now(page)
 
-    render json: { page_being_processed: page.url, page_id: page.id }
+    render json: { page_url: page.page_url, page_id: page.id }
   end
 
   def show
-    page = Page.find(params[:page_id])
+    page = Page.find(params[:id])
 
-    render json: { job_processed: page.procesed, og_image_url: page.og_image }
+    render json: { processed: page.processed, og_image_url: page.og_image_url }
   end
 end

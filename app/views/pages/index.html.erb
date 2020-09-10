@@ -1,12 +1,15 @@
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
 <div class="container">
   <br/>
+  <div class="row justify-content-center">
+  <h3>Open Graph URL Image Fetch Tool</h3>
+  </div>
 	<div class="row justify-content-center">
       <div class="col-12 col-md-10 col-lg-8">
         <form class="card card-sm">
           <div class="card-body row no-gutters align-items-center">
             <div class="col">
-              <input class="form-control form-control-lg form-control-borderless" id="input-url" type="search" placeholder="URL of page to examine open graph preview image">
+              <input class="form-control form-control-lg form-control-borderless" id="input-url" type="search" placeholder="http://">
             </div>
 
             <div class="col-auto">
@@ -16,19 +19,20 @@
           </div>
         </form>
       </div>
-
   </div>
 
 	<div class="row justify-content-center">
       <div class="col-12 col-md-10 col-lg-8">
-
         <form class="card card-sm">
           <div class="card-body row no-gutters align-items-center">
-            <img src="" id="og_image"> 
-
+            <div class="d-flex content-center">
+                <span class="center-block" id="og_url" align="center"></span>        
+            </div>
+          </div>
+          <div class="d-flex justify-content-center">         
+            <img src="" id="og_image" class="center-block">
           </div>
         </form>
       </div>
-
-  </div>  
+  </div>
 </div>

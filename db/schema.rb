@@ -16,8 +16,8 @@ ActiveRecord::Schema.define(version: 2020_09_03_022706) do
   enable_extension "plpgsql"
 
   create_table "pages", force: :cascade do |t|
-    t.string "url"
-    t.string "og_image"
+    t.string "page_url"
+    t.string "og_image_url"
     t.boolean "processed", default: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
