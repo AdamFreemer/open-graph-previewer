@@ -4,7 +4,7 @@
 
 What you'll need installed:
 * Ruby 2.7.0
-* Postres (12 or greater)
+* Postgres (12 or greater)
 
 From your command line:
 
@@ -24,7 +24,7 @@ http://localhost:3000
 
 Simply copy any fully qualified URL, place it in text entry field and click `Submit` or press `Enter`.
 
-The Open Graph image URL along with a preview of image will then be displayed below, if the URL entered has an Open Graph image tag.
+The Open Graph image URL along with a preview of the image will then be displayed below, if the URL entered has an open graph image tag.
 
 ## Running Specs
 
