@@ -31,16 +31,11 @@ group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   # My service and development helper gems
   gem 'awesome_print'
-  gem 'capybara'
-  gem 'capybara-screenshot'
   gem 'factory_bot_rails'
-  gem 'faker'
   gem 'pry-byebug'
   gem 'pry-rails'
   gem 'rspec-rails'
-  gem 'selenium-webdriver'
   gem 'shoulda-matchers'
-  gem 'simplecov', require: false
 end
 
 group :development do

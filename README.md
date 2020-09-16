@@ -15,6 +15,7 @@ From your command line:
     $ rails s
 
 You'll then be able to view the app in your web browser at: 
+
 ```
 http://localhost:3000
 ```
@@ -24,6 +25,12 @@ http://localhost:3000
 Simply copy any fully qualified URL, place it in text entry field and click `Submit` or press `Enter`.
 
 The Open Graph image URL along with a preview of image will then be displayed below, if the URL entered has an Open Graph image tag.
+
+## Running Specs
+
+```
+$ bundle exec rspec
+```
 
 ## Design Notes
 

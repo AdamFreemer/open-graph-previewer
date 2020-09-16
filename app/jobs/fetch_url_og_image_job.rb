@@ -3,7 +3,6 @@ class FetchUrlOgImageJob < ApplicationJob
   queue_as :default
 
   def perform(page)
-    binding.pry
     fetch_og_image_url(page)
   end
 
@@ -12,7 +11,7 @@ class FetchUrlOgImageJob < ApplicationJob
     # If no url is entered on the front end, we filter out that behavior with the below guard clause.
     return if page.page_url.blank?
 
-    og_image_attributes = Nokogiri::HTML(open(page.page_url)).css("meta[property='og:image']").first
+    og_image_attributes = Nokogiri::HTML(URI.open(page.page_url)).css("meta[property='og:image']").first
     # if no open graph image is found don't populate og_image
     return if og_image_attributes.nil?
     # Sometimes the og_image tag can exist but still have no content, so additional error handling is performed below.
