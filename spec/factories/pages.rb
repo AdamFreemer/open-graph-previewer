@@ -1,6 +1,5 @@
 FactoryBot.define do
   factory :page do
-    url { "MyString" }
-    og_image { "MyString" }
+    page_url { "http://www.apple.com" }
   end
 end
